@@ -24,7 +24,6 @@ const styles = makeStyles((theme: Theme) => ({
     width: "100%",
     background: theme.palette.primary.light,
     height: 24,
-    margin: 8,
     borderRadius: 20,
   },
   left: {
@@ -95,72 +94,82 @@ export default () => {
 
   //? JSX Return
   return (
-    <Grid
-      container
-      className={classes.root}
-      alignItems={"center"}
-      justify={"space-between"}
-    >
-      {/*Left Menu*/}
-      <Grid container alignItems={"center"} className={classes.left}>
-        {menuItemsLeft.map((menuItem) => (
-          <div style={{ height: "100%", display: "flex" }} key={menuItem.name}>
+    <div style={{ width: "100%", padding: "8px" }}>
+      <Grid
+        container
+        className={classes.root}
+        alignItems={"center"}
+        justify={"space-between"}
+      >
+        {/*Left Menu*/}
+        <Grid container alignItems={"center"} className={classes.left}>
+          {menuItemsLeft.map((menuItem) => (
             <div
-              className={classNames(classes.menuItem, {
-                [classes.active]: !!menuItem.active,
-              })}
+              style={{ height: "100%", display: "flex" }}
+              key={menuItem.name}
             >
-              <img
-                src={menuItem.icon}
-                alt={menuItem.name}
-                className={classes.icon}
-              />
-              <Typography
-                className={classNames(classes.name, {
+              <div
+                className={classNames(classes.menuItem, {
                   [classes.active]: !!menuItem.active,
                 })}
               >
-                {menuItem.name}
-              </Typography>
+                <img
+                  src={menuItem.icon}
+                  alt={menuItem.name}
+                  className={classes.icon}
+                />
+                <Typography
+                  className={classNames(classes.name, {
+                    [classes.active]: !!menuItem.active,
+                  })}
+                >
+                  {menuItem.name}
+                </Typography>
+              </div>
+              <Divider variant={"middle"} className={classes.divider} />
             </div>
-            <Divider variant={"middle"} className={classes.divider} />
+          ))}
+          {/* Date Menu */}
+          <div className={classes.menuItem}>
+            <img
+              src={menuDate.icon}
+              alt={menuDate.name}
+              className={classes.icon}
+            />
+            <Typography className={classNames(classes.name, classes.date)}>
+              {menuDate.name}
+            </Typography>
+            <img
+              src={DropDown}
+              alt={"Drop Down"}
+              className={classNames(classes.icon, classes.dropDownIcon)}
+            />
           </div>
-        ))}
-        {/* Date Menu */}
-        <div className={classes.menuItem}>
-          <img
-            src={menuDate.icon}
-            alt={menuDate.name}
-            className={classes.icon}
-          />
-          <Typography className={classNames(classes.name, classes.date)}>
-            {menuDate.name}
-          </Typography>
-          <img
-            src={DropDown}
-            alt={"Drop Down"}
-            className={classNames(classes.icon, classes.dropDownIcon)}
-          />
-        </div>
-        <Divider variant={"middle"} className={classes.divider} />
-      </Grid>
-      {/*Right Menu*/}
+          <Divider variant={"middle"} className={classes.divider} />
+        </Grid>
+        {/*Right Menu*/}
 
-      <Grid container alignItems={"center"} className={classes.right}>
-        {menuItemsRight.map((menuItem) => (
-          <div style={{ height: "100%", display: "flex" }} key={menuItem.name}>
-            <Divider variant={"middle"} className={classes.divider} />
-            <div className={classes.menuItem}>
-              <img
-                src={menuItem.icon}
-                alt={menuItem.name}
-                className={classes.icon}
-              />
-              <Typography className={classes.name}>{menuItem.name}</Typography>
+        <Grid container alignItems={"center"} className={classes.right}>
+          {menuItemsRight.map((menuItem) => (
+            <div
+              style={{ height: "100%", display: "flex" }}
+              key={menuItem.name}
+            >
+              <Divider variant={"middle"} className={classes.divider} />
+              <div className={classes.menuItem}>
+                <img
+                  src={menuItem.icon}
+                  alt={menuItem.name}
+                  className={classes.icon}
+                />
+                <Typography className={classes.name}>
+                  {menuItem.name}
+                </Typography>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </Grid>
       </Grid>
-    </Grid>
+    </div>
   );
 };

@@ -41,7 +41,7 @@ export default ({ children }: LayoutProps) => {
         <div className={classes.main}>
           <Toolbar />
           {/*ALL children Elements*/}
-          {children}
+          <div style={{ width: "100%" }}>{children}</div>
         </div>
       </ThemeProvider>
     </div>
