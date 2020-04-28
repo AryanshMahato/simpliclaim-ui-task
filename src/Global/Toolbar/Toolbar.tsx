@@ -6,6 +6,7 @@ import People from "../../Assets/Toolbar/people.svg";
 import Mail from "../../Assets/Toolbar/mail.svg";
 import Reports from "../../Assets/Toolbar/reports.svg";
 import Settings from "../../Assets/settings.svg";
+import classNames from "classnames";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -54,14 +55,6 @@ export default () => {
     { icon: Settings, active: false },
   ];
 
-  // Returns both active and toolIcon class in active parameter is true
-  const gridIconClasses = (active: boolean) => {
-    if (active) {
-      return classes.active + " " + classes.toolIcon;
-    }
-    return classes.toolIcon;
-  };
-
   //? JSX Return
   return (
     <Grid
@@ -71,7 +64,12 @@ export default () => {
       alignItems={"center"}
     >
       {toolIcons.map((toolIcon) => (
-        <Grid item className={gridIconClasses(toolIcon.active)}>
+        <Grid
+          item
+          className={classNames(classes.toolIcon, {
+            [classes.active]: toolIcon.active,
+          })}
+        >
           <img
             src={toolIcon.icon}
             alt={"Tool Items"}

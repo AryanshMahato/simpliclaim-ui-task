@@ -1,5 +1,11 @@
 import React from "react";
-import { Grid, makeStyles, Theme, Typography } from "@material-ui/core";
+import {
+  Divider,
+  Grid,
+  makeStyles,
+  Theme,
+  Typography,
+} from "@material-ui/core";
 import Add from "../../Assets/add.svg";
 import Task from "../../Assets/task.svg";
 import Filters from "../../Assets/filters.svg";
@@ -20,12 +26,25 @@ const styles = makeStyles((theme: Theme) => ({
     margin: 8,
     borderRadius: 20,
   },
+  left: {
+    height: "100%",
+  },
+  date: {},
+  right: {},
   menuItem: {
     cursor: "pointer",
     padding: "0 12px",
     display: "flex",
     alignItems: "center",
     height: "100%",
+  },
+  divider: {
+    width: 1,
+    height: "100%",
+    margin: 0,
+    backgroundColor: theme.palette.primary.dark,
+    background: theme.palette.text.primary,
+    opacity: 0.5,
   },
   active: {
     background: theme.palette.secondary.main,
@@ -69,27 +88,32 @@ export default () => {
 
   //? JSX Return
   return (
-    <Grid container className={classes.root} alignItems={"center"} spacing={8}>
-      {menuItemsLeft.map((menuItem) => (
-        <div
-          className={classNames(classes.menuItem, {
-            [classes.active]: !!menuItem.active,
-          })}
-        >
-          <img
-            src={menuItem.icon}
-            alt={menuItem.name}
-            className={classes.icon}
-          />
-          <Typography
-            className={classNames(classes.name, {
-              [classes.active]: !!menuItem.active,
-            })}
-          >
-            {menuItem.name}
-          </Typography>
-        </div>
-      ))}
+    <Grid container className={classes.root} alignItems={"center"}>
+      <Grid container alignItems={"center"} className={classes.left}>
+        {menuItemsLeft.map((menuItem) => (
+          <>
+            <div
+              className={classNames(classes.menuItem, {
+                [classes.active]: !!menuItem.active,
+              })}
+            >
+              <img
+                src={menuItem.icon}
+                alt={menuItem.name}
+                className={classes.icon}
+              />
+              <Typography
+                className={classNames(classes.name, {
+                  [classes.active]: !!menuItem.active,
+                })}
+              >
+                {menuItem.name}
+              </Typography>
+            </div>
+            <Divider variant={"middle"} className={classes.divider} />
+          </>
+        ))}
+      </Grid>
     </Grid>
   );
 };

@@ -50,6 +50,8 @@ const styles = makeStyles((theme: Theme) => ({
     width: 1,
     height: 16,
     background: theme.palette.text.primary,
+    marginLeft: 16,
+    marginRight: 8,
     opacity: 0.5,
   },
   icons: {},

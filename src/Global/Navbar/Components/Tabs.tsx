@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core";
 import Arrow from "../../../Assets/arrow.svg";
 import Add from "../../../Assets/add.svg";
 import Zoom from "../../../Assets/search.svg";
+import classNames from "classnames";
 
 //? Props
 interface TabsProps {
@@ -53,7 +54,7 @@ export default ({ activeTabs }: TabsProps) => {
   //? JSX Return
   return (
     <Grid className={classes.root}>
-      <Box className={classes.info + " " + classes.tabBox}>
+      <Box className={classNames(classes.info, classes.tabBox)}>
         <Typography className={classes.activeTabs}>
           {activeTabs} tabs active
         </Typography>
@@ -61,7 +62,7 @@ export default ({ activeTabs }: TabsProps) => {
       </Box>
       <Box className={classes.tabBox}>
         <img src={Add} alt="Arrow" className={classes.add} />
-      </Box>{" "}
+      </Box>
       <Box className={classes.tabBox}>
         <img src={Zoom} alt="Arrow" className={classes.zoom} />
       </Box>
