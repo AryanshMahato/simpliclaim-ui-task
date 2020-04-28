@@ -47,12 +47,12 @@ export default () => {
 
   // Tool Items
   const toolIcons = [
-    { icon: Dashboard, active: false },
-    { icon: Calender, active: true },
-    { icon: People, active: false },
-    { icon: Mail, active: false },
-    { icon: Reports, active: false },
-    { icon: Settings, active: false },
+    { icon: Dashboard, name: "Dashboard", active: false },
+    { icon: Calender, name: "Calender", active: true },
+    { icon: People, name: "People", active: false },
+    { icon: Mail, name: "Mail", active: false },
+    { icon: Reports, name: "Reports", active: false },
+    { icon: Settings, name: "Settings", active: false },
   ];
 
   //? JSX Return
@@ -66,6 +66,7 @@ export default () => {
       {toolIcons.map((toolIcon) => (
         <Grid
           item
+          key={toolIcon.name}
           className={classNames(classes.toolIcon, {
             [classes.active]: toolIcon.active,
           })}

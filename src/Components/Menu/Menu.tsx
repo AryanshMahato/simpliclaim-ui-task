@@ -104,7 +104,7 @@ export default () => {
       {/*Left Menu*/}
       <Grid container alignItems={"center"} className={classes.left}>
         {menuItemsLeft.map((menuItem) => (
-          <>
+          <div style={{ height: "100%", display: "flex" }} key={menuItem.name}>
             <div
               className={classNames(classes.menuItem, {
                 [classes.active]: !!menuItem.active,
@@ -124,7 +124,7 @@ export default () => {
               </Typography>
             </div>
             <Divider variant={"middle"} className={classes.divider} />
-          </>
+          </div>
         ))}
         {/* Date Menu */}
         <div className={classes.menuItem}>
@@ -148,7 +148,7 @@ export default () => {
 
       <Grid container alignItems={"center"} className={classes.right}>
         {menuItemsRight.map((menuItem) => (
-          <>
+          <div style={{ height: "100%", display: "flex" }} key={menuItem.name}>
             <Divider variant={"middle"} className={classes.divider} />
             <div className={classes.menuItem}>
               <img
@@ -158,7 +158,7 @@ export default () => {
               />
               <Typography className={classes.name}>{menuItem.name}</Typography>
             </div>
-          </>
+          </div>
         ))}
       </Grid>
     </Grid>

@@ -23,19 +23,25 @@ const styles = makeStyles(() => ({
 export default () => {
   const classes = styles();
 
-  const navIcons = [ThemeIcon, TaskIcon, NotificationIcon, ProfileIcon];
+  const navIcons = [
+    { name: "ThemeIcon", icon: ThemeIcon },
+    { name: "TaskIcon", icon: TaskIcon },
+    { name: "NotificationIcon", icon: NotificationIcon },
+    { name: "ProfileIcon", icon: ProfileIcon },
+  ];
 
   //? JSX Return
   return (
     <>
-      {navIcons.map((icon) => (
+      {navIcons.map((navIcons) => (
         <Grid
           container
+          key={navIcons.name}
           className={classes.navIcon}
           justify={"center"}
           alignItems={"center"}
         >
-          <img src={icon} alt="Nav Icon" className={classes.icon} />
+          <img src={navIcons.icon} alt="Nav Icon" className={classes.icon} />
         </Grid>
       ))}
     </>
