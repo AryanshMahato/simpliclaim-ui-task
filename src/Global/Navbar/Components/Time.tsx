@@ -4,7 +4,9 @@ import Clock from "../../../Assets/clock.svg";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
-  root: {},
+  root: {
+    width: "fit-content",
+  },
   clock: {
     width: 12,
     height: 12,

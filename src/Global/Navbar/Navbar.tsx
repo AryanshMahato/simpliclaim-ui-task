@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Grid, makeStyles, Theme, Typography } from "@material-ui/core";
+import {
+  Box,
+  Divider,
+  Grid,
+  makeStyles,
+  Theme,
+  Typography,
+} from "@material-ui/core";
 import Clinic from "./Components/Clinic";
 import Arrow from "../../Assets/arrow.svg";
 import Tabs from "./Components/Tabs";
@@ -34,6 +41,12 @@ const styles = makeStyles((theme: Theme) => ({
   },
   tabs: {},
   time: {},
+  divider: {
+    width: 1,
+    height: 16,
+    background: theme.palette.text.primary,
+    opacity: 0.5,
+  },
   icons: {},
 }));
 
@@ -66,12 +79,14 @@ export default () => {
           <Clinic>Sydney Clinic</Clinic>
           <img src={Arrow} alt="Arrow" className={classes.arrowDown} />
         </Box>
+        {/*Active tabs and utility Buttons*/}
         <Tabs activeTabs={5} />
       </Grid>
       {/*Left Part Ends*/}
       {/*Right Part Starts*/}
-      <Grid container>
+      <Grid container justify={"flex-end"} alignItems={"center"}>
         <Time />
+        <Divider variant={"middle"} className={classes.divider} light />
       </Grid>
       {/*Right Part Ends*/}
     </Grid>
