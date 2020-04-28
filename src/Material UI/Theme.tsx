@@ -1,7 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 // Global Styles
-
 export default createMuiTheme({
   palette: {
     primary: {
@@ -13,6 +12,7 @@ export default createMuiTheme({
       main: "#0f6ebe",
       dark: "#094e87",
     },
+    //Text Color Palette
     text: {
       primary: "#e6e6e6",
       secondary: "#999999",

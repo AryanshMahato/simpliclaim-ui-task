@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Grid, makeStyles, Theme, Typography } from "@material-ui/core";
 
+//? Styles
 const styles = makeStyles((theme: Theme) => ({
   root: {
     width: "100%",
@@ -30,10 +31,14 @@ const styles = makeStyles((theme: Theme) => ({
   icons: {},
 }));
 
+//? Default Export
 export default () => {
   const classes = styles();
+
+  //? JSX Return
   return (
     <Grid className={classes.root} container alignItems="center">
+      {/*Left Part Starts*/}
       <Box>
         <Grid
           className={classes.oval}
@@ -47,6 +52,7 @@ export default () => {
       <Box className={classes.clinic}>
         <Typography>Sydney Clinic</Typography>
       </Box>
+      {/*Left Part Ends*/}
     </Grid>
   );
 };
