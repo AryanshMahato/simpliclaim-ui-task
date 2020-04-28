@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid, makeStyles, Theme, Typography } from "@material-ui/core";
 import Clock from "../../../Assets/clock.svg";
+import currentTime from "../../../Util/CurrentTime";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -25,15 +26,10 @@ const styles = makeStyles((theme: Theme) => ({
 export default () => {
   const classes = styles();
 
-  // Sets today time at component load
   const today = new Date();
-  const [time, setTime] = useState(
-    today.toLocaleString("en-US", {
-      hour: "numeric",
-      minute: "numeric",
-      hour12: true,
-    })
-  );
+
+  // Sets today time at component load
+  const [time, setTime] = useState(currentTime());
 
   // Gets Current Second
   const [second, setSecond] = useState(
@@ -53,13 +49,7 @@ export default () => {
       // Reset Second to 0
       setSecond(0);
       // Updates DOM with new Time
-      setTime(
-        today.toLocaleString("en-US", {
-          hour: "numeric",
-          minute: "numeric",
-          hour12: true,
-        })
-      );
+      setTime(currentTime());
     }
   }, [second]);
 
