@@ -7,6 +7,7 @@ export default [
   {
     badge: CreditCard,
     name: "Ashley Simons",
+    topic: "Cardiac Surgery",
     badgeColor: "#df7833",
     date: 8,
     time: 9,
@@ -15,6 +16,7 @@ export default [
   {
     badge: Doctor,
     name: "Andrew Peters Veelo",
+    topic: "Cardiac Surgery",
     badgeColor: "#03ae73",
     date: 8,
     time: 9,
@@ -23,6 +25,7 @@ export default [
   {
     badge: CheckBox,
     name: "Ashley Bhooravaala",
+    topic: "Cardiac Surgery",
     badgeColor: "#03ae73",
     date: 8,
     time: 9,
@@ -31,6 +34,7 @@ export default [
   {
     badge: Calender,
     name: "Peter Meyers",
+    topic: "Cardiac Surgery",
     badgeColor: "#c24040",
     date: 8,
     time: 9,
@@ -39,6 +43,7 @@ export default [
   {
     badge: CheckBox,
     name: "Ashley Bhooravaala",
+    topic: "Cardiac Surgery",
     badgeColor: "#03ae73",
     date: 8,
     time: 10,
@@ -47,6 +52,7 @@ export default [
   {
     badge: Calender,
     name: "Peter Meyers",
+    topic: "Cardiac Surgery",
     badgeColor: "#c24040",
     date: 8,
     time: 10,
@@ -55,6 +61,7 @@ export default [
   {
     badge: Doctor,
     name: "Andrew Peters Veelo",
+    topic: "Cardiac Surgery",
     badgeColor: "#03ae73",
     date: 9,
     time: 9,
@@ -63,6 +70,7 @@ export default [
   {
     badge: CheckBox,
     name: "Ashley Bhooravaala",
+    topic: "Cardiac Surgery",
     badgeColor: "#03ae73",
     date: 9,
     time: 9,
