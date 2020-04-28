@@ -11,6 +11,7 @@ import Clinic from "./Components/Clinic";
 import Arrow from "../../Assets/arrow.svg";
 import Tabs from "./Components/Tabs";
 import Time from "./Components/Time";
+import NavIcons from "./Components/NavIcons";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -19,6 +20,10 @@ const styles = makeStyles((theme: Theme) => ({
     height: 36,
     background: theme.palette.secondary.dark,
     padding: "0 8px",
+  },
+  child: {
+    // Prevents child to take 100% width(50% width of parent) if not needed
+    width: "unset",
   },
   oval: {
     width: 20,
@@ -64,7 +69,7 @@ export default () => {
       wrap={"nowrap"}
     >
       {/*Left Part Starts*/}
-      <Grid container alignItems="center">
+      <Grid container alignItems="center" className={classes.child}>
         {/*Main Icon*/}
         <Grid
           className={classes.oval}
@@ -84,9 +89,15 @@ export default () => {
       </Grid>
       {/*Left Part Ends*/}
       {/*Right Part Starts*/}
-      <Grid container justify={"flex-end"} alignItems={"center"}>
+      <Grid
+        container
+        justify={"flex-end"}
+        alignItems={"center"}
+        className={classes.child}
+      >
         <Time />
         <Divider variant={"middle"} className={classes.divider} light />
+        <NavIcons />
       </Grid>
       {/*Right Part Ends*/}
     </Grid>
