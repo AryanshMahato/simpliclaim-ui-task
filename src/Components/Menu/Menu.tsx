@@ -7,6 +7,7 @@ import Today from "../../Assets/next-date.svg";
 import Calender from "../../Assets/calender.svg";
 import Adjust from "../../Assets/adjust.svg";
 import Settings from "../../Assets/settings.svg";
+import classNames from "classnames";
 import date from "../../Util/Date";
 
 //? Styles
@@ -20,9 +21,16 @@ const styles = makeStyles((theme: Theme) => ({
     borderRadius: 20,
   },
   menuItem: {
+    cursor: "pointer",
     padding: "0 12px",
     display: "flex",
     alignItems: "center",
+    height: "100%",
+  },
+  active: {
+    background: theme.palette.secondary.main,
+    borderRadius: "20px 0 0 20px",
+    color: `${theme.palette.text.primary} !important`,
   },
   icon: {
     width: 8,
@@ -63,13 +71,23 @@ export default () => {
   return (
     <Grid container className={classes.root} alignItems={"center"} spacing={8}>
       {menuItemsLeft.map((menuItem) => (
-        <div className={classes.menuItem}>
+        <div
+          className={classNames(classes.menuItem, {
+            [classes.active]: !!menuItem.active,
+          })}
+        >
           <img
             src={menuItem.icon}
             alt={menuItem.name}
             className={classes.icon}
           />
-          <Typography className={classes.name}>{menuItem.name}</Typography>
+          <Typography
+            className={classNames(classes.name, {
+              [classes.active]: !!menuItem.active,
+            })}
+          >
+            {menuItem.name}
+          </Typography>
         </div>
       ))}
     </Grid>
