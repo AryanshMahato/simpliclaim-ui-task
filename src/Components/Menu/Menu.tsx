@@ -28,6 +28,7 @@ const styles = makeStyles((theme: Theme) => ({
     borderRadius: 20,
   },
   left: {
+    width: "fit-content",
     height: "100%",
   },
   date: {
@@ -36,7 +37,10 @@ const styles = makeStyles((theme: Theme) => ({
   dropDownIcon: {
     transform: "rotate(180deg)",
   },
-  right: {},
+  right: {
+    width: "fit-content",
+    height: "100%",
+  },
   menuItem: {
     cursor: "pointer",
     padding: "0 12px",
@@ -50,7 +54,6 @@ const styles = makeStyles((theme: Theme) => ({
     margin: 0,
     backgroundColor: theme.palette.primary.dark,
     background: theme.palette.text.primary,
-    opacity: 0.5,
   },
   active: {
     background: theme.palette.secondary.main,
@@ -87,12 +90,17 @@ export default () => {
   // Menu Item Data of Right Side
   const menuItemsRight = [
     { name: "List", icon: Adjust },
-    { name: "Settings", icon: Settings },
+    { name: "More Options", icon: Settings },
   ];
 
   //? JSX Return
   return (
-    <Grid container className={classes.root} alignItems={"center"}>
+    <Grid
+      container
+      className={classes.root}
+      alignItems={"center"}
+      justify={"space-between"}
+    >
       {/*Left Menu*/}
       <Grid container alignItems={"center"} className={classes.left}>
         {menuItemsLeft.map((menuItem) => (
@@ -137,6 +145,22 @@ export default () => {
         <Divider variant={"middle"} className={classes.divider} />
       </Grid>
       {/*Right Menu*/}
+
+      <Grid container alignItems={"center"} className={classes.right}>
+        {menuItemsRight.map((menuItem) => (
+          <>
+            <Divider variant={"middle"} className={classes.divider} />
+            <div className={classes.menuItem}>
+              <img
+                src={menuItem.icon}
+                alt={menuItem.name}
+                className={classes.icon}
+              />
+              <Typography className={classes.name}>{menuItem.name}</Typography>
+            </div>
+          </>
+        ))}
+      </Grid>
     </Grid>
   );
 };
