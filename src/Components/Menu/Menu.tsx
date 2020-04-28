@@ -11,6 +11,7 @@ import Task from "../../Assets/task.svg";
 import Filters from "../../Assets/filters.svg";
 import Today from "../../Assets/next-date.svg";
 import Calender from "../../Assets/calender.svg";
+import DropDown from "../../Assets/dropdown.svg";
 import Adjust from "../../Assets/adjust.svg";
 import Settings from "../../Assets/settings.svg";
 import classNames from "classnames";
@@ -29,7 +30,12 @@ const styles = makeStyles((theme: Theme) => ({
   left: {
     height: "100%",
   },
-  date: {},
+  date: {
+    marginRight: 3,
+  },
+  dropDownIcon: {
+    transform: "rotate(180deg)",
+  },
   right: {},
   menuItem: {
     cursor: "pointer",
@@ -67,8 +73,6 @@ const styles = makeStyles((theme: Theme) => ({
 export default () => {
   const classes = styles();
 
-  const today = date();
-
   // Menu Item Data of Left Side(except calender)
   const menuItemsLeft = [
     { name: "New", icon: Add, active: true },
@@ -78,7 +82,7 @@ export default () => {
   ];
 
   // Menu Date Item
-  const menuDate = { name: today, icon: Calender, isDate: true };
+  const menuDate = { name: date(), icon: Calender, isDate: true };
 
   // Menu Item Data of Right Side
   const menuItemsRight = [
@@ -89,6 +93,7 @@ export default () => {
   //? JSX Return
   return (
     <Grid container className={classes.root} alignItems={"center"}>
+      {/*Left Menu*/}
       <Grid container alignItems={"center"} className={classes.left}>
         {menuItemsLeft.map((menuItem) => (
           <>
@@ -113,7 +118,25 @@ export default () => {
             <Divider variant={"middle"} className={classes.divider} />
           </>
         ))}
+        {/* Date Menu */}
+        <div className={classes.menuItem}>
+          <img
+            src={menuDate.icon}
+            alt={menuDate.name}
+            className={classes.icon}
+          />
+          <Typography className={classNames(classes.name, classes.date)}>
+            {menuDate.name}
+          </Typography>
+          <img
+            src={DropDown}
+            alt={"Drop Down"}
+            className={classNames(classes.icon, classes.dropDownIcon)}
+          />
+        </div>
+        <Divider variant={"middle"} className={classes.divider} />
       </Grid>
+      {/*Right Menu*/}
     </Grid>
   );
 };
