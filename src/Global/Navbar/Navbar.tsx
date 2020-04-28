@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Grid, makeStyles, Theme, Typography } from "@material-ui/core";
+import Clinic from "./Components/Clinic";
+import Arrow from "../../Assets/arrow.svg";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -20,11 +22,13 @@ const styles = makeStyles((theme: Theme) => ({
     fontSize: 10,
   },
   clinic: {
+    display: "flex",
     color: theme.palette.text.primary,
     marginLeft: 12,
-    lineHeight: "1.33",
-    fontWeight: 500,
-    fontSize: 12,
+  },
+  arrowDown: {
+    marginLeft: 3,
+    cursor: "pointer",
   },
   tabs: {},
   time: {},
@@ -40,6 +44,7 @@ export default () => {
     <Grid className={classes.root} container alignItems="center">
       {/*Left Part Starts*/}
       <Box>
+        {/*Main Icon*/}
         <Grid
           className={classes.oval}
           container
@@ -49,8 +54,10 @@ export default () => {
           <Typography className={classes.icon}>SC</Typography>
         </Grid>
       </Box>
+      {/*Clinic Name*/}
       <Box className={classes.clinic}>
-        <Typography>Sydney Clinic</Typography>
+        <Clinic>Sydney Clinic</Clinic>
+        <img src={Arrow} alt="Arrow" className={classes.arrowDown} />
       </Box>
       {/*Left Part Ends*/}
     </Grid>
