@@ -14,7 +14,6 @@ interface LayoutProps {
 const styles = makeStyles(() => ({
   root: {
     display: "flex",
-    minHeight: "100vh",
     flexFlow: "column",
   },
   header: {},
