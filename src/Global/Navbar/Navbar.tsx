@@ -1,26 +1,26 @@
 import React from "react";
-import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Box, Grid, makeStyles, Theme, Typography } from "@material-ui/core";
 
-const styles = makeStyles(() => ({
+const styles = makeStyles((theme: Theme) => ({
   root: {
     width: "100%",
     height: 36,
-    background: "#094e87",
+    background: theme.palette.secondary.dark,
     padding: "0 8px",
   },
   oval: {
     width: 20,
     height: 20,
-    backgroundColor: "#202020",
+    backgroundColor: theme.palette.primary.main,
     borderRadius: "50%",
   },
   icon: {
-    color: "#e6e6e6",
+    color: theme.palette.text.primary,
     fontSize: 10,
   },
   clinic: {
+    color: theme.palette.text.primary,
     marginLeft: 12,
-    color: "#e6e6e6",
     lineHeight: "1.33",
     fontWeight: 500,
     fontSize: 12,
