@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
 import ThemeIcon from "../../../Assets/NavIcons/theme.svg";
-import TaskIcon from "../../../Assets/NavIcons/task.svg";
+import TaskIcon from "../../../Assets/task.svg";
 import NotificationIcon from "../../../Assets/NavIcons/notification.svg";
 import ProfileIcon from "../../../Assets/NavIcons/profile.svg";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { Grid, makeStyles, Theme } from "@material-ui/core";
 import Dashboard from "../../Assets/Toolbar/dashboard.svg";
-import Calender from "../../Assets/Toolbar/calender.svg";
+import Calender from "../../Assets/calender.svg";
 import People from "../../Assets/Toolbar/people.svg";
 import Mail from "../../Assets/Toolbar/mail.svg";
 import Reports from "../../Assets/Toolbar/reports.svg";
-import Settings from "../../Assets/Toolbar/settings.svg";
+import Settings from "../../Assets/settings.svg";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
