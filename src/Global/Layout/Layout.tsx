@@ -17,12 +17,10 @@ const styles = makeStyles(() => ({
     minHeight: "100vh",
     flexFlow: "column",
   },
-  header: {
-    flex: " 0 1 auto",
-  },
+  header: {},
   main: {
     display: "flex",
-    flex: "1 1 auto",
+    flexFlow: "column",
   },
 }));
 
@@ -41,7 +39,7 @@ export default ({ children }: LayoutProps) => {
         <div className={classes.main}>
           <Toolbar />
           {/*ALL children Elements*/}
-          <div style={{ width: "100%" }}>{children}</div>
+          <div style={{ marginLeft: "40px" }}>{children}</div>
         </div>
       </ThemeProvider>
     </div>

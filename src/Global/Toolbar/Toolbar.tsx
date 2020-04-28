@@ -13,6 +13,8 @@ const styles = makeStyles((theme: Theme) => ({
   root: {
     background: theme.palette.primary.dark,
     width: "40px",
+    minHeight: "100%",
+    position: "fixed",
   },
   active: {
     background: "rgba(15, 110, 190, 0.16)",
