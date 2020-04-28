@@ -5,10 +5,12 @@ import Arrow from "../../../Assets/arrow.svg";
 import Add from "../../../Assets/add.svg";
 import Zoom from "../../../Assets/search.svg";
 
+//? Props
 interface TabsProps {
   activeTabs: number;
 }
 
+//? Styles
 const styles = makeStyles((theme: Theme) => ({
   root: {
     display: "flex",
@@ -44,8 +46,11 @@ const styles = makeStyles((theme: Theme) => ({
   zoom: {},
 }));
 
+//? Default Export
 export default ({ activeTabs }: TabsProps) => {
   const classes = styles();
+
+  //? JSX Return
   return (
     <Grid className={classes.root}>
       <Box className={classes.info + " " + classes.tabBox}>

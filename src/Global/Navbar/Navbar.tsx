@@ -3,6 +3,7 @@ import { Box, Grid, makeStyles, Theme, Typography } from "@material-ui/core";
 import Clinic from "./Components/Clinic";
 import Arrow from "../../Assets/arrow.svg";
 import Tabs from "./Components/Tabs";
+import Time from "./Components/Time";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -42,9 +43,15 @@ export default () => {
 
   //? JSX Return
   return (
-    <Grid className={classes.root} container alignItems="center">
+    <Grid
+      className={classes.root}
+      container
+      alignItems="center"
+      justify={"space-between"}
+      wrap={"nowrap"}
+    >
       {/*Left Part Starts*/}
-      <Box>
+      <Grid container alignItems="center">
         {/*Main Icon*/}
         <Grid
           className={classes.oval}
@@ -54,14 +61,19 @@ export default () => {
         >
           <Typography className={classes.icon}>SC</Typography>
         </Grid>
-      </Box>
-      {/*Clinic Name*/}
-      <Box className={classes.clinic}>
-        <Clinic>Sydney Clinic</Clinic>
-        <img src={Arrow} alt="Arrow" className={classes.arrowDown} />
-      </Box>
-      <Tabs activeTabs={5} />
+        {/*Clinic Name*/}
+        <Box className={classes.clinic}>
+          <Clinic>Sydney Clinic</Clinic>
+          <img src={Arrow} alt="Arrow" className={classes.arrowDown} />
+        </Box>
+        <Tabs activeTabs={5} />
+      </Grid>
       {/*Left Part Ends*/}
+      {/*Right Part Starts*/}
+      <Grid container>
+        <Time />
+      </Grid>
+      {/*Right Part Ends*/}
     </Grid>
   );
 };
