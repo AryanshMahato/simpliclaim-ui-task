@@ -34,6 +34,7 @@ const styles = makeStyles((theme: Theme) => ({
   icon: {
     color: theme.palette.text.primary,
     fontSize: 10,
+    lineHeight: 1.4,
   },
   clinic: {
     display: "flex",

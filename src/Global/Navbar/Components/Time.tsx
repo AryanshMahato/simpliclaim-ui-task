@@ -17,6 +17,7 @@ const styles = makeStyles((theme: Theme) => ({
     fontSize: 12,
     fontWeight: 500,
     color: theme.palette.text.primary,
+    lineHeight: 1.33,
   },
 }));
 

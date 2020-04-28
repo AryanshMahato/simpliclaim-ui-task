@@ -6,7 +6,7 @@ const styles = makeStyles(() => ({
   root: {
     fontWeight: 500,
     fontSize: 12,
-    lineHeight: "1.33",
+    lineHeight: 1.33,
   },
 }));
 
