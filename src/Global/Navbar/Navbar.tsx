@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid, makeStyles, Theme, Typography } from "@material-ui/core";
 import Clinic from "./Components/Clinic";
 import Arrow from "../../Assets/arrow.svg";
+import Tabs from "./Components/Tabs";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -59,6 +60,7 @@ export default () => {
         <Clinic>Sydney Clinic</Clinic>
         <img src={Arrow} alt="Arrow" className={classes.arrowDown} />
       </Box>
+      <Tabs activeTabs={5} />
       {/*Left Part Ends*/}
     </Grid>
   );
