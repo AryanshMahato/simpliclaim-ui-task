@@ -66,6 +66,8 @@ const styles = makeStyles((theme: Theme) => ({
     color: theme.palette.text.secondary,
   },
   name: {
+    height: 14,
+    fontWeight: 500,
     fontSize: 10,
     color: theme.palette.text.secondary,
   },
