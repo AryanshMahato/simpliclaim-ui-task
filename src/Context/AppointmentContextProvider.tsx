@@ -2,16 +2,19 @@ import React, { createContext } from "react";
 import Appointments from "../Data/Appointments";
 import IAppointment from "../Types/Appointments";
 import { IModelData } from "../Types/ModelData";
+import moment from "moment";
 
 //? Props
 interface AppointmentContextProps {
   children: React.ReactNode;
 }
 
+console.log();
+
 // Empty sets to give structure to the calender
 const modelData: Array<IModelData> = [
   {
-    date: 8,
+    date: moment().date(),
     time: [
       {
         hour: 9,
@@ -52,7 +55,7 @@ const modelData: Array<IModelData> = [
     ],
   },
   {
-    date: 9,
+    date: moment().add(1, "days").date(),
     time: [
       {
         hour: 9,
@@ -93,7 +96,7 @@ const modelData: Array<IModelData> = [
     ],
   },
   {
-    date: 10,
+    date: moment().add(2, "days").date(),
     time: [
       {
         hour: 9,
@@ -134,7 +137,7 @@ const modelData: Array<IModelData> = [
     ],
   },
   {
-    date: 11,
+    date: moment().add(3, "days").date(),
     time: [
       {
         hour: 9,
@@ -175,7 +178,7 @@ const modelData: Array<IModelData> = [
     ],
   },
   {
-    date: 12,
+    date: moment().add(4, "days").date(),
     time: [
       {
         hour: 9,
@@ -216,7 +219,7 @@ const modelData: Array<IModelData> = [
     ],
   },
   {
-    date: 13,
+    date: moment().add(5, "days").date(),
     time: [
       {
         hour: 9,
@@ -257,7 +260,7 @@ const modelData: Array<IModelData> = [
     ],
   },
   {
-    date: 14,
+    date: moment().add(6, "days").date(),
     time: [
       {
         hour: 9,
