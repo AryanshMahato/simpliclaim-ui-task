@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
+import HourRow from "./HourColumn";
 
 //? Props
 interface DayColumnProps {
@@ -10,20 +11,28 @@ interface DayColumnProps {
 const styles = makeStyles((theme: Theme) => ({
   root: {
     display: "flex",
-    background: theme.palette.primary.light,
+    flexFlow: "column",
     minWidth: 180,
-    margin: "0 1px",
+    marginRight: 1,
+  },
+  heading: {
+    background: theme.palette.primary.light,
   },
 }));
 
 //? Default Export
 export default ({ todaySchedule }: DayColumnProps) => {
   const classes = styles();
-
   //? JSX Return
   return (
     <div className={classes.root}>
-      <Typography>{todaySchedule.date}</Typography>
+      <div className={classes.heading}>
+        <Typography>{todaySchedule.date}</Typography>
+      </div>
+
+      {todaySchedule.time.map((time: any) => (
+        <HourRow hours={time} key={time} />
+      ))}
     </div>
   );
 };

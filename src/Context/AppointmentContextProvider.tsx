@@ -10,44 +10,40 @@ const modelData = [
     date: 8,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },
@@ -55,44 +51,40 @@ const modelData = [
     date: 9,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },
@@ -100,44 +92,40 @@ const modelData = [
     date: 10,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },
@@ -145,44 +133,40 @@ const modelData = [
     date: 11,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },
@@ -190,44 +174,40 @@ const modelData = [
     date: 12,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },
@@ -235,44 +215,40 @@ const modelData = [
     date: 13,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },
@@ -280,44 +256,40 @@ const modelData = [
     date: 14,
     time: [
       {
-        9: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 9,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        10: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 10,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        11: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 11,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
       {
-        12: {
-          slot: [
-            { children: null },
-            { children: null },
-            { children: null },
-            { children: null },
-          ],
-        },
+        hour: 12,
+        slot: [
+          { children: null },
+          { children: null },
+          { children: null },
+          { children: null },
+        ],
       },
     ],
   },

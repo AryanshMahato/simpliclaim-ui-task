@@ -1,22 +1,28 @@
 import React from "react";
 import { makeStyles, Theme } from "@material-ui/core";
+import SlotColumn from "./SlotColumn";
 
 //? Props
-interface HourColumnProps {
+interface HourProps {
   hours: any;
 }
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
-  root: {},
+  root: {
+    background: theme.palette.primary.light,
+  },
 }));
 
 //? Default Export
-export default ({ hours }: HourColumnProps) => {
+export default ({ hours }: HourProps) => {
   const classes = styles();
-
-  console.log(hours);
-
   //? JSX Return
-  return <div className={classes.root}></div>;
+  return (
+    <div className={classes.root}>
+      {hours.slot.map((singleSlot: any) => (
+        <SlotColumn slots={singleSlot} />
+      ))}
+    </div>
+  );
 };
