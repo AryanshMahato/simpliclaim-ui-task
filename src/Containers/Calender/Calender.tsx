@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Grid, makeStyles, Theme } from "@material-ui/core";
 import DayColumn from "./Components/DayColumn";
+import { AppointmentContext } from "../../Context/AppointmentContextProvider";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -8,17 +9,26 @@ const styles = makeStyles((theme: Theme) => ({
     height: "100%",
     width: "100%",
     padding: 1,
+    background: "rgba(255, 255, 255, 0.024)",
+    display: "flex",
+    overflow: "scroll",
   },
 }));
 
 //? Default Export
 export default () => {
   const classes = styles();
+  const appointmentsFields = useContext(AppointmentContext);
 
   //? JSX Return
   return (
     <Grid className={classes.root}>
-      <DayColumn today={8} />
+      {appointmentsFields.map((appointmentsField) => (
+        <DayColumn
+          todaySchedule={appointmentsField}
+          key={appointmentsField.date}
+        />
+      ))}
     </Grid>
   );
 };

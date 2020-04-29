@@ -3,44 +3,27 @@ import { makeStyles, Theme, Typography } from "@material-ui/core";
 
 //? Props
 interface DayColumnProps {
-  today: number;
+  todaySchedule: any;
 }
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
   root: {
     display: "flex",
-    width: "unset",
-  },
-  dayColumn: {
     background: theme.palette.primary.light,
-    width: 180,
+    minWidth: 180,
+    margin: "0 1px",
   },
 }));
 
 //? Default Export
-export default ({ today }: DayColumnProps) => {
+export default ({ todaySchedule }: DayColumnProps) => {
   const classes = styles();
-
-  // Array of total days to display,
-  const daysToDisplay = [
-    today,
-    ++today,
-    ++today,
-    ++today,
-    ++today,
-    ++today,
-    ++today,
-  ];
 
   //? JSX Return
   return (
     <div className={classes.root}>
-      {daysToDisplay.map((day) => (
-        <div className={classes.dayColumn}>
-          <Typography>{day}</Typography>
-        </div>
-      ))}
+      <Typography>{todaySchedule.date}</Typography>
     </div>
   );
 };
