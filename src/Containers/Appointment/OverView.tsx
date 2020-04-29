@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
-import IAppointment from "../../../Types/Appointments";
+import IAppointment from "../../Types/Appointments";
+import Info from "./Info";
 
 //? Props
 interface OverViewProps {
@@ -57,17 +58,28 @@ export default ({ appointment }: OverViewProps) => {
   // second brackets executes inner function to get classes object
   const classes = styles(appointment.badgeColor)();
 
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const overViewClicked = (event: React.MouseEvent<HTMLDivElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   //? JSX Return
   return (
     <div className={classes.root}>
-      <div className={classes.badgeColor} />
-      <div className={classes.badgeContainer}>
+      <div className={classes.badgeColor} onClick={overViewClicked} />
+      <div className={classes.badgeContainer} onClick={overViewClicked}>
         <img src={appointment.badge} alt={"Badge"} className={classes.badge} />
       </div>
-      <div className={classes.textContainer}>
+      <div className={classes.textContainer} onClick={overViewClicked}>
         <Typography className={classes.name}>{appointment.name}</Typography>
         <Typography className={classes.topic}>{appointment.topic}</Typography>
       </div>
+      <Info name={appointment.name} anchorEl={anchorEl} onClose={handleClose} />
     </div>
   );
 };
