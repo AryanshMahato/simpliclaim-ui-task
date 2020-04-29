@@ -16,10 +16,12 @@ import NavIcons from "./Components/NavIcons";
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
   root: {
+    position: "fixed",
     width: "100%",
     height: 36,
     background: theme.palette.secondary.dark,
     padding: "0 8px",
+    zIndex: 100,
   },
   child: {
     // Prevents child to take 100% width(50% width of parent) if not needed

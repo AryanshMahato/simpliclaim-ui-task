@@ -20,6 +20,7 @@ const styles = makeStyles(() => ({
   main: {
     display: "flex",
     flexFlow: "column",
+    marginTop: "2.25rem",
   },
 }));
 

@@ -13,7 +13,8 @@ const styles = makeStyles((theme: Theme) => ({
     padding: 1,
     background: "rgba(255, 255, 255, 0.024)",
     display: "flex",
-    overflow: "scroll",
+    overflowX: "scroll",
+    overflowY: "hidden",
   },
   emptyCell: {
     height: "2.5rem",

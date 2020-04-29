@@ -13,7 +13,9 @@ const styles = makeStyles((theme: Theme) => ({
   root: {
     background: theme.palette.primary.dark,
     width: "40px",
-    minHeight: "100%",
+    minHeight: "100vh",
+    paddingTop: "2.25rem",
+    top: 0,
     position: "fixed",
   },
   active: {
