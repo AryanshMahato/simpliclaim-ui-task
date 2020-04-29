@@ -2,10 +2,12 @@ import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
 import HourRow from "./HourColumn";
 import { IModelData } from "../../../Types/ModelData";
+import classNames from "classnames";
 
 //? Props
 interface DayColumnProps {
   todaySchedule: IModelData;
+  index: number;
 }
 
 //? Styles
@@ -15,9 +17,16 @@ const styles = makeStyles((theme: Theme) => ({
     flexFlow: "column",
     minWidth: 180,
     marginRight: 1,
+    "&>*": {
+      background: "rgba(18,18,18,0.7)",
+    },
+  },
+  firstColumn: {
+    "&>*": {
+      background: `${theme.palette.primary.light}`,
+    },
   },
   heading: {
-    background: theme.palette.primary.light,
     height: "2.5rem",
     display: "flex",
     alignItems: "center",
@@ -43,7 +52,7 @@ const styles = makeStyles((theme: Theme) => ({
 }));
 
 //? Default Export
-export default ({ todaySchedule }: DayColumnProps) => {
+export default ({ todaySchedule, index }: DayColumnProps) => {
   const classes = styles();
 
   // Adds 0 in front of singular dates
@@ -55,7 +64,11 @@ export default ({ todaySchedule }: DayColumnProps) => {
   };
   //? JSX Return
   return (
-    <div className={classes.root}>
+    <div
+      className={classNames(classes.root, {
+        [classes.firstColumn]: index === 0,
+      })}
+    >
       <div className={classes.heading}>
         <Typography className={classes.date}>{date()}</Typography>
         <Typography className={classes.day}>{todaySchedule.day}</Typography>

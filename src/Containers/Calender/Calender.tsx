@@ -34,10 +34,11 @@ export default () => {
         <div className={classes.emptyCell} />
         <HourAnnotation />
       </div>
-      {appointmentsFields.map((appointmentsField: IModelData) => (
+      {appointmentsFields.map((appointmentsField: IModelData, index) => (
         <DayColumn
           todaySchedule={appointmentsField}
           key={appointmentsField.date}
+          index={index}
         />
       ))}
     </Grid>
