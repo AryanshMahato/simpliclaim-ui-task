@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
 import IAppointment from "../../Types/Appointments";
-import Info from "./Info";
+import Info from "./InfoModal";
 
 //? Props
 interface OverViewProps {
@@ -12,6 +12,7 @@ interface OverViewProps {
 const styles = (background: string) =>
   makeStyles((theme: Theme) => ({
     root: {
+      cursor: "pointer",
       height: "1.75rem",
       boxShadow: "0 0 2px 0 rgba(0, 0, 0, 0.5)",
       borderRadius: 2,
@@ -38,7 +39,9 @@ const styles = (background: string) =>
       height: "1rem",
       width: "1rem",
     },
-    textContainer: {},
+    textContainer: {
+      marginLeft: "0.25rem",
+    },
     name: {
       fontSize: "0.625rem",
       lineHeight: 1.4,
