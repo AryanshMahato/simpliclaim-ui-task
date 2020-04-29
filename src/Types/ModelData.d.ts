@@ -10,6 +10,7 @@ interface IModelTime {
 
 interface IModelData {
   date: number;
+  day: string;
   time: Array<IModelTime>;
 }
 

@@ -16,7 +16,7 @@ const styles = makeStyles((theme: Theme) => ({
     overflow: "scroll",
   },
   emptyCell: {
-    height: "2.4375rem",
+    height: "2.5rem",
     background: theme.palette.primary.dark,
   },
 }));

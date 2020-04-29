@@ -18,6 +18,27 @@ const styles = makeStyles((theme: Theme) => ({
   },
   heading: {
     background: theme.palette.primary.light,
+    height: "2.5rem",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+    padding: ".5rem",
+  },
+  date: {
+    position: "relative",
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    lineHeight: 1.17,
+    color: "#999999",
+  },
+  day: {
+    position: "relative",
+    color: "#999999",
+    fontSize: "0.625rem",
+    fontWeight: 500,
+    lineHeight: 1.4,
+    top: ".25rem",
+    left: ".125rem",
   },
 }));
 
@@ -28,7 +49,8 @@ export default ({ todaySchedule }: DayColumnProps) => {
   return (
     <div className={classes.root}>
       <div className={classes.heading}>
-        <Typography>{todaySchedule.date}</Typography>
+        <Typography className={classes.date}>{todaySchedule.date}</Typography>
+        <Typography className={classes.day}>{todaySchedule.day}</Typography>
       </div>
       {todaySchedule.time.map((time: any) => (
         <HourRow hours={time} key={time} />

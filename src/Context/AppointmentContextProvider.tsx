@@ -15,6 +15,7 @@ console.log();
 const modelData: Array<IModelData> = [
   {
     date: moment().date(),
+    day: moment().format("dddd"),
     time: [
       {
         hour: 9,
@@ -56,6 +57,8 @@ const modelData: Array<IModelData> = [
   },
   {
     date: moment().add(1, "days").date(),
+    day: moment().add(1, "days").format("dddd"),
+
     time: [
       {
         hour: 9,
@@ -97,6 +100,8 @@ const modelData: Array<IModelData> = [
   },
   {
     date: moment().add(2, "days").date(),
+    day: moment().add(2, "days").format("dddd"),
+
     time: [
       {
         hour: 9,
@@ -138,6 +143,8 @@ const modelData: Array<IModelData> = [
   },
   {
     date: moment().add(3, "days").date(),
+    day: moment().add(3, "days").format("dddd"),
+
     time: [
       {
         hour: 9,
@@ -179,6 +186,7 @@ const modelData: Array<IModelData> = [
   },
   {
     date: moment().add(4, "days").date(),
+    day: moment().add(4, "days").format("dddd"),
     time: [
       {
         hour: 9,
@@ -220,6 +228,8 @@ const modelData: Array<IModelData> = [
   },
   {
     date: moment().add(5, "days").date(),
+    day: moment().add(5, "days").format("dddd"),
+
     time: [
       {
         hour: 9,
@@ -261,6 +271,7 @@ const modelData: Array<IModelData> = [
   },
   {
     date: moment().add(6, "days").date(),
+    day: moment().add(6, "days").format("dddd"),
     time: [
       {
         hour: 9,
