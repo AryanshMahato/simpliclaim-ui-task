@@ -29,7 +29,6 @@ export default ({ todaySchedule }: DayColumnProps) => {
       <div className={classes.heading}>
         <Typography>{todaySchedule.date}</Typography>
       </div>
-
       {todaySchedule.time.map((time: any) => (
         <HourRow hours={time} key={time} />
       ))}

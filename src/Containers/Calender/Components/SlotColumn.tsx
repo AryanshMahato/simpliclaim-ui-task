@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles, Theme, Divider } from "@material-ui/core";
+import OverView from "../../Appointment/Components/OverView";
 
 //? Props
 interface SlotColumnProps {
@@ -23,12 +24,12 @@ const styles = makeStyles((theme: Theme) => ({
 export default ({ slots }: SlotColumnProps) => {
   const classes = styles();
 
-  console.log(slots);
-
   //? JSX Return
   return (
     <>
-      <div className={classes.root}>{slots.children}</div>
+      <div className={classes.root}>
+        {!!slots.children ? <OverView appointment={slots.children} /> : null}
+      </div>
       <Divider light className={classes.divider} />
     </>
   );
