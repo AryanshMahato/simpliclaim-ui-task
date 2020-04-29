@@ -45,11 +45,19 @@ const styles = makeStyles((theme: Theme) => ({
 //? Default Export
 export default ({ todaySchedule }: DayColumnProps) => {
   const classes = styles();
+
+  // Adds 0 in front of singular dates
+  const date = () => {
+    if (todaySchedule.date < 10) {
+      return "0" + todaySchedule.date;
+    }
+    return todaySchedule.date;
+  };
   //? JSX Return
   return (
     <div className={classes.root}>
       <div className={classes.heading}>
-        <Typography className={classes.date}>{todaySchedule.date}</Typography>
+        <Typography className={classes.date}>{date()}</Typography>
         <Typography className={classes.day}>{todaySchedule.day}</Typography>
       </div>
       {todaySchedule.time.map((time: any) => (
