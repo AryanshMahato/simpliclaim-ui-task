@@ -60,3 +60,5 @@ export default ({ appointment }: OverViewProps) => {
     </div>
   );
 };
+
+// Overview box that will be shown on Calender

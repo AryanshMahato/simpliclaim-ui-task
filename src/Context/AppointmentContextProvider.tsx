@@ -6,6 +6,7 @@ interface AppointmentContextProps {
   children: React.ReactNode;
 }
 
+// Empty sets to give structure to the calender
 const modelData = [
   {
     date: 8,
@@ -296,6 +297,7 @@ const modelData = [
   },
 ];
 
+// Algorithm to fill Data in Model from Appointments Object
 const fillData = () => {
   Appointments.forEach((appointment: any) => {
     modelData.forEach((data) => {

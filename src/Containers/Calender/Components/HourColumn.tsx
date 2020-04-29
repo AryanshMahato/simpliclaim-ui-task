@@ -26,3 +26,5 @@ export default ({ hours }: HourProps) => {
     </div>
   );
 };
+
+// Manages all hours present Context

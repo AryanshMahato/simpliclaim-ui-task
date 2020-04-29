@@ -35,3 +35,5 @@ export default ({ todaySchedule }: DayColumnProps) => {
     </div>
   );
 };
+
+// Manages whole Day Column

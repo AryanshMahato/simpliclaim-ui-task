@@ -28,9 +28,12 @@ export default ({ slots }: SlotColumnProps) => {
   return (
     <>
       <div className={classes.root}>
+        {/*Returns Overview if Children is present in Slot of Context */}
         {!!slots.children ? <OverView appointment={slots.children} /> : null}
       </div>
       <Divider light className={classes.divider} />
     </>
   );
 };
+
+// Manages each and every slots
