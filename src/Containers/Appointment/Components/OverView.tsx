@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
-import IAppointments from "../../../Types/Appointments";
+import IAppointment from "../../../Types/Appointments";
 
 //? Props
 interface OverViewProps {
-  appointment: IAppointments;
+  appointment: IAppointment;
 }
 
 //? Styles

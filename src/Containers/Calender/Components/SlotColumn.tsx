@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles, Theme, Divider } from "@material-ui/core";
 import OverView from "../../Appointment/Components/OverView";
+import { ISlot } from "../../../Types/ModelData";
 
 //? Props
 interface SlotColumnProps {
-  slots: any;
+  slots: ISlot;
 }
 
 //? Styles

@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles, Theme, Typography } from "@material-ui/core";
 import HourRow from "./HourColumn";
+import { IModelData } from "../../../Types/ModelData";
 
 //? Props
 interface DayColumnProps {
-  todaySchedule: any;
+  todaySchedule: IModelData;
 }
 
 //? Styles

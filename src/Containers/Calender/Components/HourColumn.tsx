@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles, Theme } from "@material-ui/core";
 import SlotColumn from "./SlotColumn";
+import { IModelTime } from "../../../Types/ModelData";
 
 //? Props
 interface HourProps {
-  hours: any;
+  hours: IModelTime;
 }
 
 //? Styles

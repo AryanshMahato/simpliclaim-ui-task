@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Grid, makeStyles, Theme } from "@material-ui/core";
 import DayColumn from "./Components/DayColumn";
 import { AppointmentContext } from "../../Context/AppointmentContextProvider";
+import { IModelData } from "../../Types/ModelData";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -23,7 +24,7 @@ export default () => {
   //? JSX Return
   return (
     <Grid className={classes.root}>
-      {appointmentsFields.map((appointmentsField) => (
+      {appointmentsFields.map((appointmentsField: IModelData) => (
         <DayColumn
           todaySchedule={appointmentsField}
           key={appointmentsField.date}

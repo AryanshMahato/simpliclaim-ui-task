@@ -1,5 +1,7 @@
 import React, { createContext } from "react";
 import Appointments from "../Data/Appointments";
+import IAppointment from "../Types/Appointments";
+import { IModelData } from "../Types/ModelData";
 
 //? Props
 interface AppointmentContextProps {
@@ -7,7 +9,7 @@ interface AppointmentContextProps {
 }
 
 // Empty sets to give structure to the calender
-const modelData = [
+const modelData: Array<IModelData> = [
   {
     date: 8,
     time: [
@@ -299,7 +301,7 @@ const modelData = [
 
 // Algorithm to fill Data in Model from Appointments Object
 const fillData = () => {
-  Appointments.forEach((appointment: any) => {
+  Appointments.forEach((appointment: IAppointment) => {
     modelData.forEach((data) => {
       if (data.date === appointment.date) {
         data.time.forEach((hours) => {

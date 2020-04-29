@@ -1,4 +1,4 @@
-interface IAppointments {
+interface IAppointment {
   badge: any;
   name: string;
   topic: string;
@@ -7,4 +7,4 @@ interface IAppointments {
   time: number;
   slot: number;
 }
-export default IAppointments;
+export default IAppointment;
