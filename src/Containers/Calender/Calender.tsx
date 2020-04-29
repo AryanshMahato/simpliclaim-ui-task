@@ -3,6 +3,7 @@ import { Grid, makeStyles, Theme } from "@material-ui/core";
 import DayColumn from "./Components/DayColumn";
 import { AppointmentContext } from "../../Context/AppointmentContextProvider";
 import { IModelData } from "../../Types/ModelData";
+import HourAnnotation from "./Components/HourAnnotation";
 
 //? Styles
 const styles = makeStyles((theme: Theme) => ({
@@ -14,6 +15,10 @@ const styles = makeStyles((theme: Theme) => ({
     display: "flex",
     overflow: "scroll",
   },
+  emptyCell: {
+    height: "2.4375rem",
+    background: theme.palette.primary.dark,
+  },
 }));
 
 //? Default Export
@@ -24,6 +29,10 @@ export default () => {
   //? JSX Return
   return (
     <Grid className={classes.root}>
+      <div>
+        <div className={classes.emptyCell} />
+        <HourAnnotation />
+      </div>
       {appointmentsFields.map((appointmentsField: IModelData) => (
         <DayColumn
           todaySchedule={appointmentsField}
